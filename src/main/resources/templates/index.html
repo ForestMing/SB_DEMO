@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="../static/bootstrap-3.3.7-dist/main.css"/>
     <script src="../static/bootstrap-3.3.7-dist/js/test.js" type="text/javascript"></script>
     <script src="../static/bootstrap-3.3.7-dist/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js" type="text/javascript"></script>
+
 </head>
 <body>
 <!--导航栏-->
@@ -36,15 +38,209 @@
     <div class="row">
         <!--left导航-->
         <div class="col-sm-2">
-            <div class="list-group side-bar">
-                <a class="list-group-item active" href="#">全部</a>
-                <a class="list-group-item" href="#">电影</a>
-                <a class="list-group-item" href="#">电视剧</a>
-                <a class="list-group-item" href="#">明星</a>
-                <a class="list-group-item" href="#">八卦</a>
-                <a class="list-group-item" href="#">音乐</a>
-                <a class="list-group-item" href="#">演员</a>
-                <a class="list-group-item" href="#">歌手</a>
+            <div class="panel-group table-responsive" role="tablist">
+                <div class="panel panel-primary leftMenu">
+                    <!-- 利用data-target指定要折叠的分组列表 -->
+                    <div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab" >
+                        <h4 class="panel-title">
+                            教育
+                            <span class="glyphicon glyphicon-chevron-up right"></span>
+                        </h4>
+                    </div>
+                    <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+                    <div id="collapseListGroup1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <!-- 利用data-target指定URL -->
+                                <button class="menu-item-left" data-target="test2.html">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>教材
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>外语
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <!-- 利用data-target指定URL -->
+                                <button class="menu-item-left" data-target="test2.html">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>教辅
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>工具书
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div><!--panel end-->
+                <div class="panel panel-primary leftMenu">
+                    <div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+                        <h4 class="panel-title">
+                            文艺
+                            <span class="glyphicon glyphicon-chevron-down right"></span>
+                        </h4>
+                    </div>
+                    <div id="collapseListGroup2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>文学
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <!-- 利用data-target指定URL -->
+                                <button class="menu-item-left" data-target="test2.html">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>传记
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>艺术
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <!-- 利用data-target指定URL -->
+                                <button class="menu-item-left" data-target="test2.html">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>摄影
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-primary leftMenu">
+                    <div class="panel-heading" id="collapseListGroupHeading3" data-toggle="collapse" data-target="#collapseListGroup3" role="tab" >
+                        <h4 class="panel-title">
+                            经营
+                            <span class="glyphicon glyphicon-chevron-down right"></span>
+                        </h4>
+                    </div>
+                    <div id="collapseListGroup3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading3">
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>经济
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>管理
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>投资理财
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-primary leftMenu">
+                    <div class="panel-heading" id="collapseListGroupHeading4" data-toggle="collapse" data-target="#collapseListGroup4" role="tab" >
+                        <h4 class="panel-title">
+                            生活
+                            <span class="glyphicon glyphicon-chevron-down right"></span>
+                        </h4>
+                    </div>
+                    <div id="collapseListGroup4" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading4">
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>休闲
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>时尚
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>旅游
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>家居
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-primary leftMenu">
+                    <div class="panel-heading" id="collapseListGroupHeading5" data-toggle="collapse" data-target="#collapseListGroup5" role="tab" >
+                        <h4 class="panel-title">
+                            科技
+                            <span class="glyphicon glyphicon-chevron-down right"></span>
+                        </h4>
+                    </div>
+                    <div id="collapseListGroup5" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading5">
+                        <ul class="list-group">
+
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>科普读物
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>建筑
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>医学
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>计算机/网络
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>农业/林业
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>工业
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel panel-primary leftMenu">
+                    <div class="panel-heading" id="collapseListGroupHeading6" data-toggle="collapse" data-target="#collapseListGroup6" role="tab" >
+                        <h4 class="panel-title">
+                            小说
+                            <span class="glyphicon glyphicon-chevron-down right"></span>
+                        </h4>
+                    </div>
+                    <div id="collapseListGroup6" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading6">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>世界名著
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>当代小说
+                                </button>
+                            </li>
+                            <li class="list-group-item">
+                                <button class="menu-item-left">
+                                    <span class="glyphicon glyphicon-triangle-right"></span>言情小说
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <!--middle内容-->
@@ -79,6 +275,14 @@
         </div>
     </div>
 </div>
-
+<script>
+    $(function(){
+        $(".panel-heading").click(function(e){
+            /*切换折叠指示图标*/
+            $(this).find("span").toggleClass("glyphicon-chevron-down");
+            $(this).find("span").toggleClass("glyphicon-chevron-up");
+        });
+    });
+</script>
 </body>
 </html>

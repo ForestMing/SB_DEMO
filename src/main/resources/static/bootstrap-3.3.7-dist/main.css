@@ -16,7 +16,7 @@ img {
     width: 60px;
     background-image: url(../img/logo-sen.png);
     background-repeat: no-repeat;
-    background-size: 200%;
+    background-size: 250%;
     background-position: center center;
 }
 
@@ -133,4 +133,43 @@ img {
 
 .news .content {
     font-size: 16px;
+}
+----------------------
+
+.panel-group{
+    max-height:770px;
+    overflow: auto;
+}
+.leftMenu{
+    margin:10px;
+    margin-top:5px;
+    border-color: #a67e63;
+    background-color: #a67e63;
+}
+.leftMenu .panel-heading{
+    font-size:14px;
+    padding-left:20px;
+    height:36px;
+    line-height:36px;
+    color:white;
+    position:relative;
+    cursor:pointer;
+    background-color: #a67e63;
+
+}/*转成手形图标*/
+.leftMenu .panel-heading span{
+    position:absolute;
+    right:10px;
+    top:12px;
+}
+.leftMenu .menu-item-left{
+    padding: 2px;
+    background: transparent;
+    border:1px solid transparent;
+    border-radius: 6px;
+}
+.leftMenu .menu-item-left:hover{
+    background:#C4E3F3;
+    border:1px solid #a67e63;
+
 }
