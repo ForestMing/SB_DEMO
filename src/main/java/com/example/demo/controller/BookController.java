@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.entity.Person;
-import com.example.demo.service.PersonService;
+import com.example.demo.entity.Book;
+import com.example.demo.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
@@ -14,22 +14,21 @@ import javax.annotation.Resource;
  * Created by 69077 on 2017/11/22.
  */
 @Controller
-public class AddController{
+public class BookController{
     @Autowired
-    @Qualifier("PersonService")
-    private PersonService personService ;
+    @Qualifier("BookService")
+    private BookService bookService ;
 
     @RequestMapping(value="/add", method=RequestMethod.GET)
     public String add(Model model) {
-        model.addAttribute("person", new Person());
+        model.addAttribute("book", new Book());
         return "add";
     }
 
     @RequestMapping(value = "add" ,method = RequestMethod.POST)
-    public String add(@ModelAttribute Person person,Model model){
-        model.addAttribute("person",person);
-        System.out.println(person.getId()+","+person.getName());
-        personService.addPerson(person);
+    public String add(@ModelAttribute Book book,Model model){
+        model.addAttribute("book", book );
+        bookService.findBook(book);
         return "result";
     }
 

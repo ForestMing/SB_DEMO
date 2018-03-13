@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.BookMapper">
+
+    <resultMap id="book" type="Book">
+        <id column="BookId" property="BookId" jdbcType="INTEGER"/>
+        <association property="BookTypeId" javaType="BookType">
+            <id column="BookTypeId" property="BookTypeId"/>
+            <result column="BookTypeName" property="BookTypeName"/>
+        </association>
+        <result column="BookName" property="BookName" jdbcType="VARCHAR"/>
+        <result column="BookPress" property="BookPress" jdbcType="VARCHAR"/>
+        <result column="BookPubDate" property="BookPubDate" jdbcType="DATE"/>
+        <result column="BookSize" property="BookSize" jdbcType="INTEGER"/>
+        <result column="BookVersion" property="BookVersion" jdbcType="VARCHAR"/>
+        <result column="BookAuthor" property="BookAuthor" jdbcType="VARCHAR"/>
+        <result column="BookTanslor" property="BookTanslor" jdbcType="VARCHAR"/>
+        <result column="Bookisbn" property="Bookisbn" jdbcType="VARCHAR"/>
+        <result column="BookPages" property="BookPages" jdbcType="INTEGER"/>
+        <result column="BookPrprice" property="BookPrprice" jdbcType="DOUBLE"/>
+        <result column="BookDealmount" property="BookDealmount" jdbcType="INTEGER"/>
+        <result column="BookLookmount" property="BookLookmount" jdbcType="INTEGER"/>
+        <result column="BookDiscount" property="BookDiscount" jdbcType="DOUBLE"/>
+        <result column="BookPic" property="BookPic" jdbcType="VARCHAR"/>
+        <result column="BookStoremount" property="BookStoremount" jdbcType="INTEGER"/>
+        <result column="BookStoretime" property="BookStoretime" jdbcType="DATE"/>
+        <result column="BookPackstyle" property="BookPackstyle" jdbcType="VARCHAR"/>
+
+    </resultMap>
+
+    <select id="findBook" parameterType="com.example.demo.entity.Book">
+        SELECT *
+        FROM tb_bookinfo
+        where 1=1 AND 
+        <if test="BookName != null and BookPress != null and BookAuthor != null">
+            AND BookName = #{BookName} AND BookPress = #{BookPress} AND BookAuthor = #{BookAuthor}
+        </if>
+    </select>
+
+</mapper>
